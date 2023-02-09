@@ -1,0 +1,9 @@
+<ul class="crises">
+  <li *ngFor="let role of roles$ | async" [class.selected]="role.id === selectedId">
+    <a [routerLink]="[role.id]">
+      <span class="badge">{{ role.id }}</span>{{ role.name }}
+    </a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
